@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Dr. Sharma",
+    "speciality": "Cardiologist",
+    "available_slots": ["10:00", "11:00", "14:00"]
+  },
+  {
+    "name": "Dr. Mehta",
+    "speciality": "Dermatologist",
+    "available_slots": ["09:30", "12:00", "16:00"]
+  },
+  {
+    "name": "Dr. Verma",
+    "speciality": "Neurologist",
+    "available_slots": ["11:30", "13:00", "15:00"]
+  },
+  {
+    "name": "Dr. Khan",
+    "speciality": "ENT",
+    "available_slots": ["10:30", "12:30", "15:30"]
+  },
+  {
+    "name": "Dr. Bose",
+    "speciality": "Orthopedic",
+    "available_slots": ["09:00", "11:15", "14:45"]
+  }
+]
