@@ -96,11 +96,12 @@ def cancel_appointment(user_msg):
         updated_lines = []
         cancelled = False
         with open("appointments.csv", "r") as f:
-            for line in f:
-                name, doctor, appt_date, appt_time = [x.strip() for x in line.split(",")]
+            reader = csv.reader(f)
+            for row in reader:
+                name, doctor, appt_date, appt_time = [x.strip() for x in row]
                 if (doctor.strip().lower() == doctor_name and 
-                    appt_date.strip() == date and 
-                    appt_time.strip() == time and 
+                    appt_date.strip().lower() == date and 
+                    appt_time.strip().lower() == time and 
                     name.strip().lower() == current_user.lower()):
                     cancelled = True
                     continue

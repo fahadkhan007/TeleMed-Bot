@@ -80,4 +80,9 @@ body {
   button:hover {
     background: #0056b3;
   }
+  .names{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
