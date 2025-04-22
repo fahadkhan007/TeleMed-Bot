@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 DOCTOR_FILE = "data/doctors.json"
 APPOINTMENT_FILE = "appointments.csv"
-current_user = "fahad khan"  # Hardcoded for now
+current_user = "fahad khan"  
 
 
 @app.route("/")
@@ -17,10 +17,11 @@ def home():
 def chatbot_response():
     user_msg = request.json["msg"].strip()
 
+    if "who made this chatbot" in user_msg.lower():
+        return jsonify(reply="👨‍💻 I was created by Fahad, Akchhat and Lucky Here to help you book you doctor appointments\n Hi! I’m your Telemed Assistant. How can I help you today?\nYou can say 'show available doctors', 'book appointments', 'cancel appointment', or 'my appointments'.")
     if any(greet in user_msg.lower() for greet in ["hi", "hello", "hey"]):
-        return jsonify(reply="👋 Hi! I’m your Telemed Assistant. How can I help you today?\nYou can say 'show doctors', 'book', 'cancel', or 'my appointments'.")
-
-    if "show doctors" in user_msg.lower():
+        return jsonify(reply="👋 Hi! I’m your Telemed Assistant. How can I help you today?\nYou can say 'show available doctors', 'book appointments', 'cancel appointments', or 'my appointments'.")
+    elif "show doctors" in user_msg.lower():
         return jsonify(reply=show_all_doctors())
     
     elif user_msg.lower().startswith("show"):
