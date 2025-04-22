@@ -2,7 +2,8 @@
 
 An AI-powered chatbot built with Flask that helps users schedule, view, and cancel telemedicine appointments. It uses a simple yet effective interface powered by Tailwind CSS and stores data in CSV and JSON files.
 
-![Banner](./assets/banner.png)<!-- replace with actual path if needed -->
+<!-- replace with actual path if needed -->
+![AI_project_scnshot](https://github.com/user-attachments/assets/5ff6399b-9e5f-42a1-9394-fe6df67b45c7)
 
 ---
 
